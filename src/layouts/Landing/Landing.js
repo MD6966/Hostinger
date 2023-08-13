@@ -6,8 +6,10 @@ import Body from './Body'
 import NavBarLinks from './NavBarLinks'
 import Page from '../../components/page/page'
 import Nav from '../../components/AppBar/Header'
+import Footer from './components/Footer'
 const useStyles = makeStyles((theme) => ({
     root:{
+      height:'100vh'
         // padding: theme.spacing(3)
     }
 }))
@@ -21,6 +23,7 @@ const Landing = () => {
         <Box className={classes.root}>
       Welcome To the Website 
         </Box>
+        <Footer />
     </Page>
   )
 }

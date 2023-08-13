@@ -4,6 +4,12 @@ import Home from "./layouts/Home";
 import Landing from "./layouts/Landing/Landing";
 import Login from "./views/Login";
 import SignUp from "./views/SignUp";
+import AdminLogin from "./views/Admin/Auth/AdminLogin";
+import AdminDashboard from "./layouts/Admin/AdminDashboard";
+import Dashboard from "./views/Admin/Dashboard/Dashboard";
+import Products from "./views/Admin/Dashboard/Products/Products";
+import Prices from "./views/Admin/Dashboard/Prices/Prices";
+import Cupons from "./views/Admin/Dashboard/Cupons/Cupons";
 
 export default function Router() {
     let element = useRoutes([
@@ -22,7 +28,22 @@ export default function Router() {
        {
         path:'/home',
         element: <Home />,
-       }
+       },
+       {
+        path:'/admin-login',
+        element: <AdminLogin />,
+       },
+       {
+
+        path:'admin', element: <AdminDashboard />,
+        children: [
+            
+            {path:'dashboard', element:<Dashboard />},
+            {path:'products', element:<Products />},
+            {path:'prices', element:<Prices />},
+            {path:'cupons', element:<Cupons />},
+        ] 
+       },
     ])
     return element
 }
