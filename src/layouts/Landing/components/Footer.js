@@ -19,6 +19,12 @@ const Footer = () => {
             >
                 Admin
             </Button>
+            <Button variant='contained'
+            component={Link}
+            to='/checkout'
+            >
+              Checkout 
+            </Button>
         </Box>
       </StyledFooter>
     </div>
