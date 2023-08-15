@@ -3,6 +3,7 @@ import { Box, Grid, TextField, Typography, styled,
   FormControlLabel, Checkbox, Button, Stack, Card, 
   FormControl, Radio, RadioGroup } from '@mui/material'
 import { makeStyles } from '@mui/styles'
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import React from 'react'
 const CenteredBox = styled(Box)(({theme})=> ({
     display:'flex',
@@ -47,7 +48,8 @@ const Checkout = () => {
             md={6}
             xs={12}
             >
-                <Box>
+               
+                {/* <Box>
                   <Typography variant='h4'
                   fontWeight="bold"
                   >
@@ -89,7 +91,7 @@ const Checkout = () => {
                      </Box>
                     </StyledCard>
                   </Stack>
-                </Box>
+                </Box> */}
             </Grid>
             <Grid item
             lg={6}

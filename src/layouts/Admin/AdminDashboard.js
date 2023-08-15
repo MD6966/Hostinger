@@ -20,6 +20,7 @@ import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantity
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import StickyNote2Icon from '@mui/icons-material/StickyNote2';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import InventoryIcon from '@mui/icons-material/Inventory';
 const useStyles = makeStyles((theme)=> ({
     selected : {
       background:'#1976D2'
@@ -48,6 +49,9 @@ const ListData = [
     {id:2, title:'Products', icon:<ProductionQuantityLimitsIcon />, to:'/admin/products'},
     {id:3, title:'Prices', icon:<AttachMoneyIcon />, to:'/admin/prices'},
     {id:4, title:'Cupons', icon:<StickyNote2Icon />, to:'/admin/cupons'},
+    {id:5, title:'Packages', icon:<InventoryIcon />, to:'/admin/packages'},
+
+
   ]
   const StyledRoot = styled(AppBar)(({theme})=> ({
     position:'fixed',
