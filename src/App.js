@@ -10,7 +10,7 @@ import Router from './routes';
 
 function App() {
   return (
-    <div className='App' >
+    <div>
       <ThemeProvider theme={theme}>
         <StyledEngineProvider injectFirst>
         <Router /> 
