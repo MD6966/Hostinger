@@ -12,7 +12,7 @@ import Prices from "./views/Admin/Dashboard/Prices/Prices";
 import Cupons from "./views/Admin/Dashboard/Cupons/Cupons";
 import Checkout from "./views/Checkout/Checkout";
 import Packages from "./views/Admin/Dashboard/Packages/Packages";
-
+import Cart from './views/Cart'
 export default function Router() {
     let element = useRoutes([
         {
@@ -47,7 +47,9 @@ export default function Router() {
             {path:'packages', element:<Packages />},
         ] 
        },
-       {path:'/checkout', element: <Checkout />}
+       {path:'/checkout', element: <Checkout />},
+       {path:'/cart', element: <Cart/>},
+
     ])
     return element
 }

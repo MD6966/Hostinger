@@ -1,6 +1,17 @@
 import { Box, Button, Card, CardContent, CardHeader, Chip, Divider, Grid, Typography } from '@mui/material'
 import React from 'react'
 import DoneIcon from '@mui/icons-material/Done';
+import { makeStyles } from '@mui/styles';
+const useStyles = makeStyles((theme)=> ({
+  card: {
+    padding: theme.spacing(3),
+    border: '1px solid rgba(0,0,0,0.25)',
+    transition: 'transform 0.3s ease', // Add a transition to the transform property
+    '&:hover': {
+      transform: 'scale(1.05)', // Apply the scale transform on hover
+    },
+  }
+}))
 const LandingContent = () => {
   const features = [
     {first:'Standard', sec: 'Performance', color:'yellow'},
@@ -10,6 +21,7 @@ const LandingContent = () => {
     {first:'Unlimited', sec: 'Free SSL', color:'yellow'},
 
   ]
+  const classes = useStyles()
   return (
     <div>
       <Typography
@@ -25,14 +37,14 @@ const LandingContent = () => {
         container
         spacing={3}
         >
-          <Grid item
+        <Grid item
           lg={4}
           md={4}
           sm={12}
           >
            <Card
            elevation={3}
-           sx={{p:3, border: '1px solid rgba(0,0,0,0.25)'}}
+           className={classes.card}
            >
             <CardHeader title={<Typography variant="h4" sx={{textAlign:'center', fontWeight:'bold'}}>Premium</Typography>} /> 
             <Typography  sx={{textAlign:'center',}}>Everything you need to create your website</Typography>
@@ -103,7 +115,7 @@ const LandingContent = () => {
           >
            <Card
            elevation={3}
-           sx={{p:3, border: '1px solid rgba(0,0,0,0.25)'}}
+           className={classes.card}
            >
             <CardHeader title={<Typography variant="h4" sx={{textAlign:'center', fontWeight:'bold'}}>Premium</Typography>} /> 
             <Typography  sx={{textAlign:'center',}}>Everything you need to create your website</Typography>
@@ -174,7 +186,7 @@ const LandingContent = () => {
           >
            <Card
            elevation={3}
-           sx={{p:3, border: '1px solid rgba(0,0,0,0.25)'}}
+           className={classes.card}
            >
             <CardHeader title={<Typography variant="h4" sx={{textAlign:'center', fontWeight:'bold'}}>Premium</Typography>} /> 
             <Typography  sx={{textAlign:'center',}}>Everything you need to create your website</Typography>
@@ -238,6 +250,7 @@ const LandingContent = () => {
            
            </Card>
           </Grid>
+        
 
         </Grid>
       </Box>
